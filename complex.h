@@ -57,7 +57,7 @@ inline Complex operator/ (const Complex &complex1, const Complex &complex2)
     return(Complex((complex1.real * complex2.real + complex1.imaginary * complex2.imaginary) / a, (complex2.real * complex1.imaginary - complex1.real * complex2.imaginary) / a));
 }
 
-
+bool compare(Complex &complex1, Complex &complex2, char s);
 
 
 #endif // COMPLEX_H

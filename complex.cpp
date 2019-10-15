@@ -86,5 +86,37 @@ Complex Complex::conj()
     return *this;
 }
 
+bool compare(Complex &complex1, Complex &complex2, char s)
+{
+    double rl1 = complex1.getRealPart();
+    double rl2 = complex2.getRealPart();
+    double im1 = complex1.getImaginaryPart();
+    double im2 = complex2.getImaginaryPart();
 
+    if(s == '>')
+    {
+        if(sqrt(rl1 * rl1 + im1 * im1) > sqrt(rl2 * rl2 + im2 * im2))
+                return true;
+        else
+            return false;
+    }
+    else if (s == '<')
+    {
+        if(sqrt(rl1 * rl1 + im1 * im1) < sqrt(rl2 * rl2 + im2 * im2))
+                return true;
+        else
+            return false;
+    }
+    else if (s == '=')
+    {
+        if(sqrt(rl1 * rl1 + im1 * im1) == sqrt(rl2 * rl2 + im2 * im2))
+                return true;
+        else
+            return false;
+    }
+    else {
+        cout << "Error value of s " << endl;
+        return false;
+    }
+}
 
