@@ -1,5 +1,6 @@
 #include <iostream>
 #include "complex.h"
+#include <math.h>
 
 using namespace std;
 
@@ -41,30 +42,49 @@ double Complex::getImaginaryPart()
     return imaginary;
 }
 
-void Complex::show()
+void Complex::showAlg()
 {
     if(imaginary > 0)
-        cout << "complex number: {" << real << " + " << imaginary << "i}";
+        cout << "complex number: {" << real << " + " << imaginary << "i}" << endl;
     else if(imaginary == 0)
-        cout << "complex number: " << real;
+        cout << "complex number: " << real << endl;
     else
-        cout << "complex number: {" << real <<  imaginary << "i}";
+        cout << "complex number: {" << real <<  imaginary << "i}"<< endl;
 
 }
 
-Complex Complex::operator= (const Complex &complex)
+void Complex::showTrig()
+{
+    double r = sqrt(real * real + imaginary * imaginary);
+    if(imaginary > 0)
+        cout <<  r <<  " * (cos(" << atan(imaginary/real) << ") + sin(" << atan(imaginary/real) << ")i)" << endl;
+    else if (imaginary == 0)
+        cout << "cannot be represented in trigonometric form" << endl;
+    else
+        cout <<  r <<  " * (cos(" << abs(atan(imaginary/real)) << ") - sin(" << abs(atan(imaginary/real)) << ")i)" << endl;
+}
+
+void Complex::showExp()
+{
+    double r = sqrt(real * real + imaginary * imaginary);
+    cout <<  r <<  " * e^("<< atan(imaginary/real) << "i)" << endl;
+
+
+}
+
+
+Complex& Complex::operator= (const Complex &complex)
 {
     real = complex.real;
     imaginary = complex.imaginary;
     return *this;
 }
 
-
-Complex Complex::plus (const Complex &complex1, const Complex &complex2)
+Complex Complex::conj()
 {
-    real = complex1.real + complex2.real;
-    imaginary = complex1.imaginary + complex2.imaginary;
-
+    imaginary = -imaginary;
+    return *this;
 }
+
 
 
