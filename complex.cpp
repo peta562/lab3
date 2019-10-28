@@ -1,59 +1,53 @@
-#include <iostream>
 #include "complex.h"
-#include <math.h>
+
 
 using namespace std;
 
-/*Complex::Complex()
-{
-    real = 0;
-    imaginary = 0;
-}*/
 
-Complex::Complex(double rl, double im)
+Complex::Complex(double rl, double im) // конструктор с параметрами и по умолчанию
 {
     real = rl;
     imaginary = im;
 }
 
-Complex::~Complex()
+Complex::~Complex() // деструктор
 {
 }
 
-Complex::Complex(const Complex &complex)
+Complex::Complex(const Complex &complex) // конструктор копирования
 {
     real = complex.real;
     imaginary = complex.imaginary;
 }
 
-void Complex::set(double rl, double im)
+void Complex::set(double rl, double im) // задать значение
 {
     real = rl;
     imaginary = im;
 }
 
-double Complex::getRealPart()
+double Complex::getRealPart() // получить действительную часть
 {
     return real;
 }
 
-double Complex::getImaginaryPart()
+double Complex::getImaginaryPart() // получить веществ. часть
 {
     return imaginary;
 }
 
-void Complex::showAlg()
+void Complex::showAlg(QPlainTextEdit* textBrowser) // вывод в алгоритмической форме
 {
     if(imaginary > 0)
-        cout << "complex number: {" << real << " + " << imaginary << "i}" << endl;
+        textBrowser->setPlainText(QString("complex number: %1 + %2i").arg(real).arg(imaginary));
     else if(imaginary == 0)
-        cout << "complex number: " << real << endl;
+        textBrowser->setPlainText(QString("complex number: %1").arg(real));
     else
-        cout << "complex number: {" << real <<  imaginary << "i}"<< endl;
+        textBrowser->setPlainText(QString("complex number: %1  %2i").arg(real).arg(imaginary));
 
 }
 
-void Complex::showTrig()
+void Complex::showTrig() // вывод в тригонометрической форме
 {
     double r = sqrt(real * real + imaginary * imaginary);
     if(imaginary > 0)
@@ -64,29 +58,27 @@ void Complex::showTrig()
         cout <<  r <<  " * (cos(" << abs(atan(imaginary/real)) << ") - sin(" << abs(atan(imaginary/real)) << ")i)" << endl;
 }
 
-void Complex::showExp()
+void Complex::showExp() // вывод в экспонентциальной форме
 {
     double r = sqrt(real * real + imaginary * imaginary);
     cout <<  r <<  " * e^("<< atan(imaginary/real) << "i)" << endl;
-
-
 }
 
 
-Complex& Complex::operator= (const Complex &complex)
+Complex& Complex::operator= (const Complex &complex) // перегрузка оператора =
 {
     real = complex.real;
     imaginary = complex.imaginary;
     return *this;
 }
 
-Complex Complex::conj()
+Complex Complex::conj() // сопряженное число
 {
     imaginary = -imaginary;
     return *this;
 }
 
-bool compare(Complex &complex1, Complex &complex2, char s)
+bool compare(Complex &complex1, Complex &complex2, char s) // функция сравения
 {
     double rl1 = complex1.getRealPart();
     double rl2 = complex2.getRealPart();
