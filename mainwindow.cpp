@@ -8,6 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    ui->comboBox->addItem(QString('<'));
+    ui->comboBox->addItem(QString('>'));
+    ui->comboBox->addItem(QString('='));
     connect(ui->pushButton_9, SIGNAL(clicked()), this, SLOT(generate1()));
     connect(ui->pushButton_10, SIGNAL(clicked()), this, SLOT(generate2()));
 
@@ -51,6 +54,41 @@ void MainWindow::generate2()
     arrOfObj[1].showAlg(ui->plainTextEdit);
  }
 
+void MainWindow::showTrig1()
+{
+    arrOfObj[0].showTrig(ui->plainTextEdit);
+}
+
+void MainWindow::showTrig2()
+{
+    arrOfObj[1].showTrig(ui->plainTextEdit);
+}
+
+void MainWindow::showExp1()
+{
+    arrOfObj[0].showExp(ui->plainTextEdit);
+}
+
+void MainWindow::showExp2()
+{
+    arrOfObj[1].showExp(ui->plainTextEdit);
+}
+
+
+void MainWindow::conj1()
+{
+    arrOfObj[0].conj();
+    arrOfObj[0].showAlg(ui->plainTextEdit);
+}
+
+void MainWindow::conj2()
+{
+    arrOfObj[1].conj();
+    arrOfObj[1].showAlg(ui->plainTextEdit);
+}
+
+
+
 void MainWindow::plus()
 {
     arrOfObj[2] = arrOfObj[0] + arrOfObj[1];
@@ -78,6 +116,18 @@ void MainWindow::division()
     return;
 }
 
+
+void MainWindow::comp()
+{
+    QString s = ui->comboBox->currentText();
+
+    if(compare(arrOfObj[0], arrOfObj[1], s) == true)
+        ui->plainTextEdit->setPlainText(QString("true"));
+    else
+        ui->plainTextEdit->setPlainText(QString("false"));
+
+
+}
 MainWindow::~MainWindow()
 {
     delete ui;

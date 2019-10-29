@@ -50,7 +50,7 @@
     <property name="geometry">
      <rect>
       <x>41</x>
-      <y>251</y>
+      <y>291</y>
       <width>135</width>
       <height>101</height>
      </rect>
@@ -82,7 +82,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>220</y>
+      <y>260</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -120,8 +120,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>50</y>
+      <x>230</x>
+      <y>160</y>
       <width>77</width>
       <height>112</height>
      </rect>
@@ -157,37 +157,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>190</y>
-      <width>117</width>
-      <height>54</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout_4">
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_7">
-       <property name="text">
-        <string>Вывод в триг. форме</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_8">
-       <property name="text">
-        <string>Вывод в эксп. форме</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QPushButton" name="pushButton_9">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>170</y>
+      <y>160</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -200,7 +174,7 @@
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>380</y>
+      <y>400</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -208,6 +182,107 @@
     <property name="text">
      <string>Записать</string>
     </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_13">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>400</y>
+      <width>115</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>50</y>
+      <width>117</width>
+      <height>83</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_15">
+       <property name="text">
+        <string>Вывод в триг. форме</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="text">
+        <string>Вывод в эксп. форме</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_17">
+       <property name="text">
+        <string>Сопряженное число</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>300</y>
+      <width>117</width>
+      <height>83</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="text">
+        <string>Вывод в триг. форме</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="text">
+        <string>Вывод в эксп. форме</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="text">
+        <string>Сопряженное число</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>152</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_18">
+       <property name="text">
+        <string>Сравнить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -240,8 +315,8 @@
    <slot>plus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>290</x>
-     <y>92</y>
+     <x>281</x>
+     <y>216</y>
     </hint>
     <hint type="destinationlabel">
      <x>393</x>
@@ -256,8 +331,8 @@
    <slot>minus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>290</x>
-     <y>121</y>
+     <x>281</x>
+     <y>245</y>
     </hint>
     <hint type="destinationlabel">
      <x>514</x>
@@ -272,8 +347,8 @@
    <slot>multiply()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>261</x>
-     <y>154</y>
+     <x>252</x>
+     <y>274</y>
     </hint>
     <hint type="destinationlabel">
      <x>215</x>
@@ -288,12 +363,140 @@
    <slot>division()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>287</x>
-     <y>188</y>
+     <x>278</x>
+     <y>303</y>
     </hint>
     <hint type="destinationlabel">
      <x>407</x>
      <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_11</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTrig2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>398</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_13</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>440</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>392</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_12</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showExp2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>223</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_17</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>conj1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>388</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_14</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>conj2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTrig1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>71</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showExp1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>125</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_18</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>comp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>25</x>
+     <y>232</y>
     </hint>
    </hints>
   </connection>
@@ -305,5 +508,12 @@
   <slot>minus()</slot>
   <slot>multiply()</slot>
   <slot>division()</slot>
+  <slot>showTrig1()</slot>
+  <slot>showTrig2()</slot>
+  <slot>showExp1()</slot>
+  <slot>showExp2()</slot>
+  <slot>conj1()</slot>
+  <slot>conj2()</slot>
+  <slot>comp()</slot>
  </slots>
 </ui>

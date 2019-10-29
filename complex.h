@@ -31,11 +31,9 @@ class Complex
     double getImaginaryPart();
     Complex conj();
 
-    double absComplex(const Complex &complex);
-
     void showAlg(QPlainTextEdit* textBrowser);
-    void showTrig();
-    void showExp();
+    void showTrig(QPlainTextEdit* textBrowser);
+    void showExp(QPlainTextEdit* textBrowser);
 };
 
 inline Complex operator+ (const Complex &complex1, const Complex &complex2) // перегрузка оператора +
@@ -57,11 +55,12 @@ inline Complex operator/ (const Complex &complex1, const Complex &complex2) // �
 {
     if(complex2.real == 0 || complex2.imaginary == 0)
         return -1;
+
     double a = complex2.real * complex2.real + complex2.imaginary * complex2.imaginary;
     return(Complex((complex1.real * complex2.real + complex1.imaginary * complex2.imaginary) / a, (complex2.real * complex1.imaginary - complex1.real * complex2.imaginary) / a));
 }
 
-bool compare(Complex &complex1, Complex &complex2, char s);
+bool compare(Complex &complex1, Complex &complex2, QString s);
 
 
 #endif // COMPLEX_H

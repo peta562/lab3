@@ -24,19 +24,17 @@ private slots:
     void minus();
     void multiply();
     void division();
-
+    void showTrig1();
+    void showTrig2();
+    void showExp1();
+    void showExp2();
+    void conj1();
+    void conj2();
+    void comp();
 
 private:
     Ui::MainWindow *ui;
-    Complex arrOfObj[5] = { // иницилизируем массив объектов
-        Complex(),
-        Complex(),
-        Complex(),
-        Complex(),
-        Complex()
-    };
-
-
+    Complex arrOfObj[5];
 };
 
 #endif // MAINWINDOW_H
