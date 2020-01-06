@@ -34,7 +34,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Complex arrOfObj[5];
+    Complex arrOfObj[5]; // массив объектов(по заданию) по умолчанию веществ. и действ. часть равны 0
 };
 
 #endif // MAINWINDOW_H

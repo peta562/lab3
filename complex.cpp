@@ -106,9 +106,5 @@ bool compare(Complex &complex1, Complex &complex2, QString s) // функция 
         else
             return false;
     }
-    else {
-        cout << "Error value of s " << endl;
-        return false;
-    }
 }
 

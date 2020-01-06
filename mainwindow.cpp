@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
-void MainWindow::generate1()
+void MainWindow::generate1() // записываем первое число
 {
     bool notError=true;
     double real = ui->lineEditReal->text().toDouble(&notError);
@@ -35,7 +35,7 @@ void MainWindow::generate1()
    arrOfObj[0].showAlg(ui->plainTextEdit);
  }
 
-void MainWindow::generate2()
+void MainWindow::generate2() // записываем второе число
 {
     bool notError=true;
     double real = ui->lineEditReal2->text().toDouble(&notError);
@@ -93,27 +93,23 @@ void MainWindow::plus()
 {
     arrOfObj[2] = arrOfObj[0] + arrOfObj[1];
     arrOfObj[2].showAlg(ui->plainTextEdit);
-    return;
 }
 
 void MainWindow::minus()
 {
     arrOfObj[2] = arrOfObj[0] - arrOfObj[1];
     arrOfObj[2].showAlg(ui->plainTextEdit);
-    return;
 }
 void MainWindow::multiply()
 {
     arrOfObj[2] = arrOfObj[0] * arrOfObj[1];
     arrOfObj[2].showAlg(ui->plainTextEdit);
-    return;
 }
 
 void MainWindow::division()
 {
     arrOfObj[2] = arrOfObj[0] / arrOfObj[1];
     arrOfObj[2].showAlg(ui->plainTextEdit);
-    return;
 }
 
 
